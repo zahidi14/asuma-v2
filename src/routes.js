@@ -17,6 +17,11 @@ const ReportIn = React.lazy(() => import('./views/Report/ReportIn'))
 const ReportDispose = React.lazy(() => import('./views/Report/ReportDispose'))
 const ReportStat = React.lazy(() => import('./views/Report/ReportStat'))
 const ReportTren = React.lazy(() => import('./views/Report/ReportTren'))
+
+const UserSetting = React.lazy(() => import('./views/Setting/UserSetting'))
+const AdminSetting = React.lazy(() => import('./views/Setting/AdminSetting'))
+const AppSetting = React.lazy(() => import('./views/Setting/AppSetting'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -38,14 +43,19 @@ const routes = [
   { path: '/disposisi/riwayatdisposisi', name: 'Riwayat Disposisi', element: HistDispose },
 
   //Report
-  { path: '/report/surat', name: 'Laporan surat masuk dan keluar', element: ListDispose },
+  { path: '/report/surat', name: 'Laporan surat masuk dan keluar', element: ReportIn },
   {
     path: '/report/disposisi',
     name: 'Laporan disposisi dan penyelesaian tugas',
-    element: FormDispose,
+    element: ReportDispose,
   },
-  { path: '/report/statistik', name: 'Statistik kinerja', element: HistDispose },
-  { path: '/report/tren', name: 'Analisis tren', element: HistDispose },
+  { path: '/report/statistik', name: 'Statistik kinerja', element: ReportStat },
+  { path: '/report/tren', name: 'Analisis tren', element: ReportTren },
+
+  //Setting
+  { path: '/setting/user', name: 'Pengaturan Pengguna', element: UserSetting },
+  { path: '/setting/admin', name: 'Pengaturan Hak Akses', element: AdminSetting },
+  { path: '/setting/app', name: 'Pengaturan Aplikasi', element: AppSetting },
 ]
 
 export default routes

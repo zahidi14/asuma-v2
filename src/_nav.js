@@ -118,32 +118,24 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Pengaturan',
-    to: '/dashboard',
+
     icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
+
     items: [
       {
         component: CNavItem,
         name: 'Pengaturan akun pengguna',
-        to: '/base/breadcrumbs',
+        to: '/setting/user',
       },
       {
         component: CNavItem,
         name: 'Pengaturan hak akses',
-        to: '/base/breadcrumbs',
-      },
-      {
-        component: CNavItem,
-        name: 'Integrasi dengan sistem lain',
-        to: '/base/breadcrumbs',
+        to: '/setting/admin',
       },
       {
         component: CNavItem,
         name: 'Pengaturan aplikasi',
-        to: '/base/breadcrumbs',
+        to: '/setting/app',
       },
     ],
   },
