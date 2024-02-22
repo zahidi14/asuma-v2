@@ -1,0 +1,16 @@
+.logform {
+  width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  .input {
+    margin-bottom: 20px;
+  }
+  button {
+  }
+}
