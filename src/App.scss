@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.span {
+  width: 100%;
+  font-size: smaller;
+  color: aliceblue;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2em 0;
+}
+.text {
+  width: calc(33.333% - 10px);
+}

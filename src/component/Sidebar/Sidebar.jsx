@@ -16,14 +16,14 @@ import ListIcon from "@mui/icons-material/List";
 import { Link } from "react-router-dom";
 const Sidebar = ({ logout }) => {
   return (
-    <div>
+    <>
       <div className="sidebar">
         <div className="top">
           <Link to="/" style={{ textDecoration: "none" }}>
             <span className="logo">lamadmin</span>
           </Link>
         </div>
-        <hr />
+   
         <div className="center">
           <ul>
             <p className="title">MAIN</p>
@@ -34,21 +34,21 @@ const Sidebar = ({ logout }) => {
 
             {/* //SuratMasuk */}
 
-            <p className="title">Surat Masuk</p>
-            <Link to="persuratan/list" style={{ textDecoration: "none" }}>
+            <p className="title">Transaksi Surat</p>
+            <Link to="transaksi/suratmasuk" style={{ textDecoration: "none" }}>
               <li>
                 <EmailIcon className="icon" />
-                <span>Daftar Surat Masuk</span>
+                <span>Surat Masuk</span>
               </li>
             </Link>
             <Link to="persuratan/form" style={{ textDecoration: "none" }}>
               <li>
                 <ListIcon className="icon" />
-                <span>Form Surat Masuk</span>
+                <span>Surat Keluar</span>
               </li>
             </Link>
 
-            {/* Disposisi */}
+            {/*Tugas */}
 
             <p className="title">Disposisi Surat</p>
             <Link to="disposisi/list" style={{ textDecoration: "none" }}>
@@ -57,18 +57,7 @@ const Sidebar = ({ logout }) => {
                 <span>Disposisi Surat Masuk</span>
               </li>
             </Link>
-            <Link to="disposisi/form" style={{ textDecoration: "none" }}>
-              <li>
-                <ChecklistIcon className="icon" />
-                <span>Form Disposisi</span>
-              </li>
-            </Link>
-            <Link to="disposisi/riwayat" style={{ textDecoration: "none" }}>
-              <li>
-                <ChecklistIcon className="icon" />
-                <span>Riwayat Disposisi</span>
-              </li>
-            </Link>
+            
 
             {/* Report */}
             <p className="title">Laporan dan Analisis</p>
@@ -78,7 +67,9 @@ const Sidebar = ({ logout }) => {
                 <span>Riwayat Disposisi</span>
               </li>
             </Link>
+
             {/* Pengaturan  */}
+            
             <p className="title">USER</p>
             <li>
               <AccountCircleOutlinedIcon className="icon" />
@@ -95,7 +86,7 @@ const Sidebar = ({ logout }) => {
           <div className="colorOption"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

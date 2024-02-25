@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Container, Box, Button } from "@mui/material";
 import "./login.scss";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -14,11 +14,11 @@ const Login = () => {
 
   const navigate = useNavigate();
   const { dispatch } = useContext(AuthContext);
-  const a = auth();
+  const auth = getAuth();
   const handleLogin = (e) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(a, email, pass)
+    signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;

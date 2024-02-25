@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { Home, Login } from "./pages";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
@@ -15,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route
             index
             path="/*"

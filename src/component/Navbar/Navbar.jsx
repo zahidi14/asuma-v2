@@ -10,7 +10,7 @@ import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 
 const Navbar = ({ name }) => {
   return (
-    <div>
+    <>
       <div className="navbar">
         <div className="wrapper">
           <div className="search">
@@ -52,7 +52,7 @@ const Navbar = ({ name }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

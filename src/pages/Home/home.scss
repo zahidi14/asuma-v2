@@ -1,9 +1,33 @@
 .home {
+  width: 100%;
   display: flex;
-
+  flex: 1 1 auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-items: stretch;
+  .side {
+    z-index: 1080;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 200px;
+    background-color: white;
+  }
   .homeContainer {
-    flex: 6;
-
+    flex-basis: 100%;
+    flex-direction: column;
+    width: 0;
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 200px;
+    background-color: aliceblue;
+    min-height: 100vh;
     .widgets,
     .charts {
       display: flex;
@@ -27,5 +51,11 @@
         margin-bottom: 15px;
       }
     }
+  }
+  .content {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 28px;
   }
 }
